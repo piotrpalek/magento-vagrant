@@ -1,5 +1,12 @@
 # vagrant-chef-magento
 
+### username/pass
+
+* magento admin username: dev_admin
+* password: password1
+* db username: root
+* db password: vagrant
+
 ### toolset
 * install oracle virtualbox: [https://www.virtualbox.org](https://www.virtualbox.org)
 * install vagrant: [http://www.vagrantup.com](http://www.vagrantup.com)
