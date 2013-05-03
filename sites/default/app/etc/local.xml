@@ -42,7 +42,7 @@
                 <connection>
                     <host><![CDATA[localhost]]></host>
                     <username><![CDATA[root]]></username>
-                    <password><![CDATA[vagrant]]></password>
+                    <password><![CDATA[]]></password>
                     <dbname><![CDATA[magedev_db]]></dbname>
                     <active>1</active>
                 </connection>

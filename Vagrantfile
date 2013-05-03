@@ -43,10 +43,10 @@ Vagrant::Config.run do |config|
         'db_source_dir' => "/vagrant/db_import",
         'db_source_file' => "magedev_db.sql",
         'admin_user' => {
-          'firstname' => 'admin',
-          'lastname' => 'admin',
-          'username' => 'admin',
-          'email' => 'websoft1337@gmail.com',
+          'firstname' => 'mageadmin',
+          'lastname' => 'mageadmin',
+          'username' => 'mageadmin',
+          'email' => 'adminmail@example.com',
           'password' => 'password1'
         }
       },

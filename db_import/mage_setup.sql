@@ -6,10 +6,10 @@ INSERT INTO admin_user
 (`user_id`, `firstname`, `lastname`, `email`, `username`, `password`, `created`, `modified`, `logdate`, `lognum`, `reload_acl_flag`, `is_active`, `extra`)
 (SELECT
 NULL user_id,
-"dev_admin",
-"dev_admin",
-"admin@kaminrun.de",
-"dev_admin",
+"mageadmin",
+"mageadmin",
+"websoft1337@gmail.com",
+"mageadmin",
 CONCAT(MD5('krpassword1'), ':kr'),
 NOW(),
 NULL,
@@ -26,5 +26,5 @@ NULL role_id,
 2 tree_level,
 0 sort_order,
 'U' role_type,
-(SELECT user_id FROM admin_user WHERE username = 'dev_admin') user_id,
-'dev_admin' role_name;
+(SELECT user_id FROM admin_user WHERE username = 'mageadmin') user_id,
+'mageadmin' role_name;

@@ -2,7 +2,7 @@
 
 ### username/pass
 
-* magento admin username: admin
+* magento admin username: mageadmin
 * password: password1
 * db username: root
 * db password: [no password]
