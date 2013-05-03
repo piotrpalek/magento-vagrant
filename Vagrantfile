@@ -25,7 +25,7 @@ Vagrant::Config.run do |config|
   config.vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant-root", "1"]
 
   # NFS Folders ncomment for better performance (NOT AVAILABLE on Windows-Systems)
-  config.vm.share_folder "vagrant-root", "/vagrant", ".", :nfs => true
+  #config.vm.share_folder "vagrant-root", "/vagrant", ".", :nfs => true
 
   config.vm.provision :chef_solo do |chef|
     # Tell chef what recipe to run. In this case, the `main` recipe does all the magic.
