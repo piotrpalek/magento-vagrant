@@ -5,21 +5,23 @@
 # !!!! REQUIRES !!!!! A: sudo vagrant dns --install OR rvmsudo vagrant dns --install (for rvm users) to make it work !!!!
 # box_tld="devel"
 
-Vagrant::Config.run do |config|
+Vagrant.configure("2") do |config|
 
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.host_name = "magento.local"
 
   # more memory for the VM
-  config.vm.customize ["modifyvm", :id, "--memory", 512]
-  
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", 512]
+  end
+
   # configure the TLD
   # config.dns.tld = box_tld
   # config.dns.patterns = [/^.*.#{box_tld}$/]
   # !!!! use: rvmsudo vagrant dns --install
 
-  config.vm.network :hostonly, "192.168.13.37"
+  config.vm.network :private_network, ip: "192.168.13.37"
 
   # Use symbilic links
   config.vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant-root", "1"]
